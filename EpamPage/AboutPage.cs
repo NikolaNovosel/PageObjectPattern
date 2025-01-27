@@ -24,13 +24,23 @@ namespace EpamPage
         });
         
         // Clicks the About link  
-        public void ClickAbout() => About.Click();
+        public AboutPage ClickAbout()
+        {
+            About.Click();
+
+            return this;
+        } 
 
         // Scrolls to "Epam At A Glance" section  
-        public void ScrollToEpamAtGlance() => Actions.ScrollByAmount(0, EpamAtGlanceDiv.Location.Y).Perform();
+        public AboutPage ScrollToEpamAtGlance() 
+        {
+            Actions.ScrollByAmount(0, EpamAtGlanceDiv.Location.Y).Perform();
+
+            return this;
+        } 
 
         // Clicks the download button  
-        public void ClickDownload() 
+        public AboutPage ClickDownload()
         {
             try
             {
@@ -44,6 +54,8 @@ namespace EpamPage
 
                 DownloadButton.Click();
             }
+
+            return this;
         }
     }
 }

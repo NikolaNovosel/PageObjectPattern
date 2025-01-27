@@ -14,10 +14,10 @@ namespace EpamPageTests
         [Test]
         public void TestCase3()
         {
-            AboutPage aboutPage = new(Driver);
-            aboutPage.ClickAbout();
-            aboutPage.ScrollToEpamAtGlance();
-            aboutPage.ClickDownload();
+            new AboutPage(Driver)
+                .ClickAbout()
+                .ScrollToEpamAtGlance()
+                .ClickDownload();
 
             AboutPageValidation.WaitForFileDownload().Should().BeTrue();
         }

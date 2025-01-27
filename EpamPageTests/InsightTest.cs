@@ -13,9 +13,9 @@ namespace EpamPageTests
         [Test]
         public void TestCase4()
         {
-            InsightsPage insightPage = new(Driver);
-            insightPage.ClickInsight();
-            insightPage.SwipeCarousel();
+            InsightsPage insightPage = new InsightsPage(Driver)
+                        .ClickInsight()
+                        .SwipeCarousel();
 
             string mainPageArticleTextTrim = insightPage.GetMainPageArticleTextTrim();
 

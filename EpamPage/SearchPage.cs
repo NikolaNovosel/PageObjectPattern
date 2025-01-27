@@ -42,16 +42,32 @@ namespace EpamPage
         private IEnumerable<IWebElement> Links => Driver.FindElements(By.XPath("//div[@class='search-results__items']//article/h3/a"));
 
         // Opens the search bar
-        public void ClickMagnifierIcon() => Magnifier.Click();
+        public SearchPage ClickMagnifierIcon()
+        { 
+            Magnifier.Click();
+            return this;
+        }
 
         // Enters the search string
-        public void SendKeysSearch(string searchString) => Search.SendKeys(searchString);
+        public SearchPage SendKeysSearch(string searchString)
+        { 
+            Search.SendKeys(searchString);
+            return this;
+        }
 
         // Submits the search
-        public void ClickFindSearch() => FindSearch.Click();
+        public SearchPage ClickFindSearch()
+        {
+            FindSearch.Click();
+            return this;
+        }
 
         // Scroll to the last link
-        public void ScroolToLastLink() => Actions.ScrollByAmount(0, ScrolledLastLink.Location.Y).Perform();
+        public SearchPage ScroolToLastLink() 
+        { 
+            Actions.ScrollByAmount(0, ScrolledLastLink.Location.Y).Perform();
+            return this;
+        }
 
         // Check if the last 20th link is visible
         public bool HasLastLink() => LastSearchResultLink.Displayed;

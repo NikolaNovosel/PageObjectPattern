@@ -55,13 +55,23 @@ namespace EpamPage
         private IWebElement CareersArticle => Driver.FindElement(By.ClassName("vacancy-details-23__job-title"));
 
         // Navigates to the Careers page  
-        public void ClickCareers() => Careers.Click();
+        public CareersPage ClickCareers() 
+        {
+            Careers.Click(); 
+            
+            return this;
+        }
 
         // Enters a keyword into the search field  
-        public void SendKeysKeyword(string keyword) => Keywords.SendKeys(keyword);
+        public CareersPage SendKeysKeyword(string keyword)
+        { 
+            Keywords.SendKeys(keyword); 
+
+            return this;
+        }
 
         // Opens the location dropdown  
-        public void ClickLocation()
+        public CareersPage ClickLocation()
         {
             try
             {
@@ -75,13 +85,20 @@ namespace EpamPage
 
                 Location.Click();
             }
+
+            return this;
         }
 
         // Selects all locations
-        public void ClickAllLocations() => AllLocations.Click();
+        public CareersPage ClickAllLocations()
+        { 
+            AllLocations.Click();
+
+            return this;
+        }
 
         // Checks the remote filter  
-        public void ClickRemote()
+        public CareersPage ClickRemote()
         {
             try
             {
@@ -95,13 +112,19 @@ namespace EpamPage
 
                 Remote.Click();
             }
+
+            return this;
         }
 
         // Submits the job search  
-        public void ClickFindCareers() => FindCareers.Click();
+        public CareersPage ClickFindCareers()
+        { 
+            FindCareers.Click();
 
+            return this;
+        }
         // Opens the latest job result
-        public void ClickViewAndApply()
+        public CareersPage ClickViewAndApply()
         {
             try
             {
@@ -115,6 +138,8 @@ namespace EpamPage
 
                 ViewAndApply.Click();
             }
+
+            return this;
         }
 
         // Get the job title text  

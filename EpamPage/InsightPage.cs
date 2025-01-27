@@ -30,10 +30,15 @@ namespace EpamPage
         Driver.FindElement(By.XPath("//main[@id='main']/div[1]/div[2]//div[@class='column-control']//span[@class='museo-sans-light']"));
 
         // Clicks the "Insights" link 
-        public void ClickInsight() => Insight.Click();
+        public InsightsPage ClickInsight() 
+        { 
+            Insight.Click();
+
+            return this;
+        }
 
         // Swipes the carousel
-        public void SwipeCarousel()
+        public InsightsPage SwipeCarousel()
         {
             for (int swipe = 0; swipe < 2; swipe++)
             {
@@ -47,6 +52,8 @@ namespace EpamPage
             {
                 Actions.DragAndDropToOffset(Carousel, -300, 0).Perform();
             }
+
+            return this;
         }
 
         // Clicks the "Read More" button in the carousel

@@ -1,5 +1,4 @@
 ﻿using EpamPage;
-using EpamPageTests.Core;
 using FluentAssertions;
 using NUnit.Framework;
 
@@ -14,11 +13,11 @@ namespace EpamPageTests
         [TestCaseSource(nameof(SearchPage))]
         public void TestCase2(string keyword)
         {
-            SearchPage searchPage = new(Driver);
-            searchPage.ClickMagnifierIcon();
-            searchPage.SendKeysSearch(keyword);
-            searchPage.ClickFindSearch();
-            searchPage.ScroolToLastLink();
+            SearchPage searchPage = new SearchPage(Driver)
+                       .ClickMagnifierIcon()
+                       .SendKeysSearch(keyword)
+                       .ClickFindSearch()
+                       .ScroolToLastLink();
 
             if (keyword == "Cloud")
             {

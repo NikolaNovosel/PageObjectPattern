@@ -13,15 +13,15 @@ namespace EpamPageTests
         [Test]
         public void TestCase1()
         {
-            CareersPage careerPage = new (Driver);
-            careerPage.ClickCareers();
-            careerPage.ClickLocation();
-            careerPage.ClickAllLocations();
-            careerPage.SendKeysKeyword(Data.CareersPage);
-            careerPage.ClickRemote();
-            careerPage.ClickFindCareers();
-            careerPage.ClickViewAndApply();
-            careerPage.GetCareersArticleText().Should().Contain(Data.CareersPage);
+            new CareersPage (Driver)
+                .ClickCareers()
+                .ClickLocation()
+                .ClickAllLocations()
+                .SendKeysKeyword(Data.CareersPage)
+                .ClickRemote()
+                .ClickFindCareers()
+                .ClickViewAndApply()
+                .GetCareersArticleText().Should().Contain(Data.CareersPage);
         }
     }
 }
