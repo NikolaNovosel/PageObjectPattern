@@ -1,0 +1,34 @@
+﻿namespace EpamPageTests.Core
+{
+    /// <summary>
+    /// Class for validating file download functionality on the About page.
+    /// </summary>
+    internal static class AboutPageValidation
+    {
+        // Path to the downloaded file
+        private static readonly string _filePath = 
+        Path.Combine(ConfigReader.Config["downloadDir"], ConfigReader.Config["fileName"]);
+
+        // Timestamp marking the start of the file download wait period
+        private static readonly DateTime _startTime = DateTime.Now;
+
+        // Checks if the specified time (5 seconds) has elapsed since the start time
+        private static bool HasTimeElapsed => DateTime.Now < _startTime.AddSeconds(5);
+
+        // Checks if the file exists at the specified path
+        private static bool DoesFileExist => File.Exists(_filePath);
+
+        // Waits for the file to download within the specified time frame
+        internal static bool WaitForFileDownload()
+        {
+            while (HasTimeElapsed)
+            {
+                if (DoesFileExist)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+}
