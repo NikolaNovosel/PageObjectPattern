@@ -23,7 +23,7 @@ namespace EpamPageTests.Core
         private static bool IsTestCase4Running => TestContext.CurrentContext.Test.Name is "TestCase4";
 
         // Returns a WebDriver instance for the specified browser (default: Chrome)
-        internal static IWebDriver GetDriver(string browser = "chrome")
+        internal static IWebDriver GetDriver(string browser = "firefox")
         {
             switch (browser.ToLower())
             {

@@ -38,13 +38,17 @@ namespace EpamPage
         private IWebElement FindCareers => FindForm.FindElement(By.TagName("button"));
 
         // Parent element for the View and Apply button
-        private IWebElement LatestResult => Driver.FindElement(By.XPath("//ul[@class='search-result__list']/child::li[1]"));
+        private IWebElement LatestResult => Wait.Until(driver =>
+        {
+            var element = Driver.FindElement(By.XPath("//ul[@class='search-result__list']/child::li[1]"));
+            return element.Displayed && element.Enabled? element : null;
+        });
 
         // View and Apply button for the latest job result  
-        private IWebElement ViewAndApply => Wait.Until(driver =>
+        private IWebElement ViewAndApply => Wait.Until(driver => 
         {
             var element = LatestResult.FindElement(By.LinkText("VIEW AND APPLY"));
-            return element.Displayed && element.Enabled? element : null;
+            return element.Displayed && element.Enabled ? element : null;
         });
 
         // Job title text
@@ -66,7 +70,9 @@ namespace EpamPage
             catch (ElementClickInterceptedException)
             {
                 Wait.Until(driver => Cookie.Enabled);
+
                 Driver.ExecuteJavaScript("document.querySelector('#onetrust-banner-sdk').style.display='none'");
+
                 Location.Click();
             }
         }
@@ -84,7 +90,9 @@ namespace EpamPage
             catch (ElementClickInterceptedException)
             {
                 Wait.Until(driver => Cookie.Enabled);
+
                 Driver.ExecuteJavaScript("document.querySelector('#onetrust-banner-sdk').style.display='none'");
+
                 Remote.Click();
             }
         }
@@ -102,7 +110,9 @@ namespace EpamPage
             catch (ElementClickInterceptedException)
             {
                 Wait.Until(driver => Cookie.Enabled);
+
                 Driver.ExecuteJavaScript("document.querySelector('#onetrust-banner-sdk').style.display='none'");
+
                 ViewAndApply.Click();
             }
         }
