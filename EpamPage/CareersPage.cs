@@ -65,16 +65,8 @@ namespace EpamPage
             }
             catch (ElementClickInterceptedException)
             {
-                Wait.Until(driver => Cookie.Enabled);
-                try
-                {
-                    Driver.ExecuteJavaScript("document.querySelector('#onetrust-banner-sdk').style.display='none'");
-                    Location.Click();
-                }
-                catch (JavaScriptException)
-                {
-                    Location.Click();
-                }
+                Driver.ExecuteJavaScript("document.querySelector('#onetrust-banner-sdk').style.display='none'");
+                Location.Click();
             }
         }
 
@@ -90,17 +82,8 @@ namespace EpamPage
             }
             catch (ElementClickInterceptedException)
             {
-                Wait.Until(driver => Cookie.Enabled);
-
-                try
-                {
-                    Driver.ExecuteJavaScript("document.querySelector('#onetrust-banner-sdk').style.display='none'");
-                    Remote.Click();
-                }
-                catch (JavaScriptException)
-                {
-                    Remote.Click();
-                }
+                Driver.ExecuteJavaScript("document.querySelector('#onetrust-banner-sdk').style.display='none'");
+                Remote.Click();
             }
         }
 
@@ -116,17 +99,8 @@ namespace EpamPage
             }
             catch (ElementClickInterceptedException)
             {
-                Wait.Until(driver => Cookie.Enabled);
-
-                try
-                {
-                    Driver.ExecuteJavaScript("document.querySelector('#onetrust-banner-sdk').style.display='none'");
-                    ViewAndApply.Click();
-                }
-                catch (JavaScriptException)
-                {
-                    ViewAndApply.Click();
-                }
+                Driver.ExecuteJavaScript("document.querySelector('#onetrust-banner-sdk').style.display='none'");
+                ViewAndApply.Click();
             }
         }
 

@@ -58,16 +58,8 @@ namespace EpamPage
             }
             catch (ElementClickInterceptedException)
             {
-                Wait.Until(driver => Cookie.Enabled);
-                try
-                {
-                    Driver.ExecuteJavaScript("document.querySelector('#onetrust-banner-sdk').style.display='none'");
-                    ReadMore.Click();
-                }
-                catch (JavaScriptException)
-                {
-                    ReadMore.Click();
-                }
+                Driver.ExecuteJavaScript("document.querySelector('#onetrust-banner-sdk').style.display='none'");
+                ReadMore.Click();
             }
         }
 
