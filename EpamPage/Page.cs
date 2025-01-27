@@ -15,10 +15,10 @@ namespace EpamPage
         // Stores the WebDriver instance
         private readonly IWebDriver _driver;
 
-        // Provides explicit waits for elements
+        // Stores explicit waits for elements
         private readonly WebDriverWait _wait;
 
-        // Provides actions for interacting with elements
+        // Stores actions for interacting with elements
         private readonly Actions _actions;
 
         /// <summary>

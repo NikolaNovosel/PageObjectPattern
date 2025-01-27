@@ -22,7 +22,7 @@ namespace EpamPageTests
         // Provides access to the WebDriver instances
         protected IWebDriver Driver => _driver;
 
-        // Initializes the WebDriver instance
+        // Initializes and configures  the WebDriver instance
         [SetUp]
         public void Setup()
         {
