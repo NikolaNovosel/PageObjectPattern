@@ -14,7 +14,7 @@ namespace EpamPageTests.Core
     internal class DriverSingleton
     {
         // Static WebDriver instance shared across the application
-        private static IWebDriver _driver;
+        private static IWebDriver? _driver;
 
         // Private constructor to prevent instantiation
         private DriverSingleton() { }
@@ -73,13 +73,13 @@ namespace EpamPageTests.Core
         // Manage the WebDriver window
         internal static void ManageWindow()
         {
-            _driver.Manage().Window.Maximize();
+            _driver?.Manage().Window.Maximize();
         }
 
         // Set the WebDriver Url
         internal static void GetUrl()
         {
-            _driver.Url = ConfigProvider.Url;
+            _driver!.Url = ConfigProvider.Url;
         }
     }
 }
