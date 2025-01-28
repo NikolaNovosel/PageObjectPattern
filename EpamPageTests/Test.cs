@@ -17,10 +17,10 @@ namespace EpamPageTests
         protected readonly static Data Data = DataReader.DeserializeData();
 
         // Stores and access to the WebDriver instance
-        private IWebDriver _driver;
+        private IWebDriver? _driver;
 
         // Provides access to the WebDriver instances
-        protected IWebDriver Driver => _driver;
+        protected IWebDriver? Driver => _driver;
 
         // Initializes and configures  the WebDriver instance
         [SetUp]

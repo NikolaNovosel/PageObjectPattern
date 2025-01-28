@@ -12,12 +12,12 @@ namespace EpamPageTests.Core
         private static readonly string _json = File.ReadAllText("testdata.json");
 
         // Singleton instance of the Data class
-        private static Data _data;
+        private static Data? _data;
 
         // Method to read and yield search page parameters from the JSON data
         internal static IEnumerable<string> GetSearchPageParams()
         {
-            foreach (string parameter in _data.SearchPage)
+            foreach (string parameter in _data!.SearchPage)
             {
                 yield return parameter;
             }
