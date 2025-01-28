@@ -20,7 +20,11 @@ namespace EpamPage
         });
 
         // Search input field
-        private IWebElement Search => SearchParent.FindElement(By.Name("q"));
+        private IWebElement Search => Wait.Until(driver =>
+        {
+            var element = SearchParent.FindElement(By.Name("q"));
+            return element.Displayed && element.Enabled? element : null;
+        }); 
 
         // Find search button
         private IWebElement FindSearch => Wait.Until(driver => driver.FindElement(By.CssSelector("div.search-results__input-holder+button")));

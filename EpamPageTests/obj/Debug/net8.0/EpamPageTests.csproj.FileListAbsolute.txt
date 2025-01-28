@@ -255,8 +255,8 @@ C:\Users\DELL\IdeaProjects\PageObjectPattern\EpamPageTests\obj\Debug\net8.0\Epam
 C:\Users\DELL\IdeaProjects\PageObjectPattern\EpamPageTests\obj\Debug\net8.0\EpamPageTests.genruntimeconfig.cache
 C:\Users\DELL\IdeaProjects\PageObjectPattern\EpamPageTests\obj\Debug\net8.0\ref\EpamPageTests.dll
 C:\Users\DELL\IdeaProjects\PageObjectPattern\PageObjectPattern_git\EpamPageTests\bin\Debug\net8.0\.msCoverageSourceRootsMapping_EpamPageTests
-C:\Users\DELL\IdeaProjects\PageObjectPattern\PageObjectPattern_git\EpamPageTests\bin\Debug\net8.0\testhost.exe
 C:\Users\DELL\IdeaProjects\PageObjectPattern\PageObjectPattern_git\EpamPageTests\bin\Debug\net8.0\testhost.dll
+C:\Users\DELL\IdeaProjects\PageObjectPattern\PageObjectPattern_git\EpamPageTests\bin\Debug\net8.0\testhost.exe
 C:\Users\DELL\IdeaProjects\PageObjectPattern\PageObjectPattern_git\EpamPageTests\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
 C:\Users\DELL\IdeaProjects\PageObjectPattern\PageObjectPattern_git\EpamPageTests\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
 C:\Users\DELL\IdeaProjects\PageObjectPattern\PageObjectPattern_git\EpamPageTests\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
