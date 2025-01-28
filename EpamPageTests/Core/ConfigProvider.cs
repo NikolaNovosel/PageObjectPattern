@@ -1,5 +1,4 @@
-﻿
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 
 namespace EpamPageTests.Core
 {
@@ -15,13 +14,13 @@ namespace EpamPageTests.Core
         private static readonly IConfiguration Config = _builder.Build();
 
         // Provide path to the downloaded file
-        public static readonly string FilePath =
-        Path.Combine(Config["downloadDir"], Config["fileName"]);
+        public static readonly string? FilePath =
+        Path.Combine(Config["downloadDir"]!, Config["fileName"]!);
 
         // Provide the downloaded file name
-        public static readonly string DownloadDir = Config["downloadDir"];
+        public static readonly string? DownloadDir = Config["downloadDir"];
 
         // Provide the WebDriver Url
-        public static readonly string Url = Config["url"];
+        public static readonly string? Url = Config["url"];
     }
 }
