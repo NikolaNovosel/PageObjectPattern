@@ -13,7 +13,7 @@ namespace EpamPageTests
         [TestCaseSource(nameof(SearchPage))]
         public void TestCase2(string keyword)
         {
-            SearchPage searchPage = new SearchPage(Driver)
+            SearchPage searchPage = new SearchPage(Driver!)
                        .ClickMagnifierIcon()
                        .SendKeysSearch(keyword)
                        .ClickFindSearch()

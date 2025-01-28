@@ -28,7 +28,7 @@ namespace EpamPageTests.Core
         {
             _data = JsonSerializer.Deserialize<Data>(_json);
 
-            return _data;
+            return _data!;
         }
     }
 }

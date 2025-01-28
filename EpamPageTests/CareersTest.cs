@@ -13,11 +13,11 @@ namespace EpamPageTests
         [Test]
         public void TestCase1()
         {
-            new CareersPage (Driver)
+            new CareersPage (Driver!)
                 .ClickCareers()
+                .SendKeysKeyword(Data.CareersPage)
                 .ClickLocation()
                 .ClickAllLocations()
-                .SendKeysKeyword(Data.CareersPage)
                 .ClickRemote()
                 .ClickFindCareers()
                 .ClickViewAndApply()

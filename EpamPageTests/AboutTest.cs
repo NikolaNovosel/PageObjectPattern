@@ -14,7 +14,7 @@ namespace EpamPageTests
         [Test]
         public void TestCase3()
         {
-            new AboutPage(Driver)
+            new AboutPage(Driver!)
                 .ClickAbout()
                 .ScrollToEpamAtGlance()
                 .ClickDownload();

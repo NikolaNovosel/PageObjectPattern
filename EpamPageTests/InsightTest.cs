@@ -13,7 +13,7 @@ namespace EpamPageTests
         [Test]
         public void TestCase4()
         {
-            InsightsPage insightPage = new InsightsPage(Driver)
+            InsightsPage insightPage = new InsightsPage(Driver!)
                         .ClickInsight()
                         .SwipeCarousel();
 
