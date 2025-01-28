@@ -14,7 +14,7 @@ namespace EpamPageTests.Core
         {
             var chromeOptions = new ChromeOptions();
             chromeOptions.AddArgument("headless");
-            chromeOptions.AddUserProfilePreference("download.default_directory", ConfigReader.Config["downloadDir"]);
+            chromeOptions.AddUserProfilePreference("download.default_directory", ConfigProvider.DownloadDir);
             return chromeOptions;
         }
 
@@ -23,7 +23,7 @@ namespace EpamPageTests.Core
         {
             var firefoxOptions = new FirefoxOptions();
             firefoxOptions.SetPreference("browser.download.folderList", 2);
-            firefoxOptions.SetPreference("browser.download.dir", ConfigReader.Config["downloadDir"]);
+            firefoxOptions.SetPreference("browser.download.dir", ConfigProvider.DownloadDir);
             firefoxOptions.AddArgument("--headless");
             return firefoxOptions;
         }
@@ -33,7 +33,7 @@ namespace EpamPageTests.Core
         {
             var edgeOptions = new EdgeOptions();
             edgeOptions.AddArgument("--headless");
-            edgeOptions.AddUserProfilePreference("download.default_directory", ConfigReader.Config["downloadDir"]);
+            edgeOptions.AddUserProfilePreference("download.default_directory", ConfigProvider.DownloadDir);
             return edgeOptions;
         }
     }

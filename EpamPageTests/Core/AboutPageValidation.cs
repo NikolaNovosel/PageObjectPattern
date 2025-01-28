@@ -5,10 +5,6 @@
     /// </summary>
     internal static class AboutPageValidation
     {
-        // Path to the downloaded file
-        private static readonly string _filePath = 
-        Path.Combine(ConfigReader.Config["downloadDir"], ConfigReader.Config["fileName"]);
-
         // Timestamp marking the start of the file download wait period
         private static readonly DateTime _startTime = DateTime.Now;
 
@@ -16,7 +12,7 @@
         private static bool HasTimeElapsed => DateTime.Now < _startTime.AddSeconds(5);
 
         // Checks if the file exists at the specified path
-        private static bool DoesFileExist => File.Exists(_filePath);
+        private static bool DoesFileExist => File.Exists(ConfigProvider.FilePath);
 
         // Waits for the file to download within the specified time frame
         internal static bool WaitForFileDownload()

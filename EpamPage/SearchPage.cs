@@ -16,7 +16,7 @@ namespace EpamPage
         private IWebElement SearchParent => Wait.Until(driver => 
         {
             var element = Driver.FindElement(By.ClassName("header-search__panel"));
-            return element.Displayed ? element : null;
+            return element.Displayed && element.Enabled ? element : null;
         });
 
         // Search input field

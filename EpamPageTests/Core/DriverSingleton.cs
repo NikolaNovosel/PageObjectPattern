@@ -67,7 +67,7 @@ namespace EpamPageTests.Core
         // Disposes the WebDriver instance
         internal static void Dispose()
         {
-            _driver.Dispose();
+            _driver?.Dispose();
         }
 
         // Manage the WebDriver window
@@ -79,7 +79,7 @@ namespace EpamPageTests.Core
         // Set the WebDriver Url
         internal static void GetUrl()
         {
-            _driver.Url = ConfigReader.Config["url"];
+            _driver.Url = ConfigProvider.Url;
         }
     }
 }
