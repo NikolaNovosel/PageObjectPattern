@@ -8,14 +8,13 @@ namespace EpamPageTests.Core
     internal static class ConfigProvider
     {
         // Initialize a ConfigurationBuilder and add the specified JSON configuration file
-        private static readonly IConfigurationBuilder _builder = new ConfigurationBuilder().AddJsonFile("appsettings.json");
+        private static readonly IConfigurationBuilder _builder = new ConfigurationBuilder().AddJsonFile(Location.JsonAppSettings);
 
         // Build the configuration and assign it to the Configuration property
         private static readonly IConfiguration Config = _builder.Build();
 
         // Provide path to the downloaded file
-        public static readonly string? FilePath =
-        Path.Combine(Config["downloadDir"]!, Config["fileName"]!);
+        public static readonly string? FilePath = Path.Combine(Config["downloadDir"]!, Config["fileName"]!);
 
         // Provide the downloaded file name
         public static readonly string? DownloadDir = Config["downloadDir"];

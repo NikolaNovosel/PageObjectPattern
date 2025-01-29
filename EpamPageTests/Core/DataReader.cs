@@ -9,7 +9,7 @@ namespace EpamPageTests.Core
     internal static class DataReader
     {
         // JSON content read from the configuration file
-        private static readonly string _json = File.ReadAllText("testdata.json");
+        private static readonly string _jsonString = File.ReadAllText(Location.JsonTestData);
 
         // Singleton instance of the Data class
         private static Data? _data;
@@ -26,7 +26,7 @@ namespace EpamPageTests.Core
         // Method to deserialize JSON data into a Data object
         internal static Data DeserializeData()
         {
-            _data = JsonSerializer.Deserialize<Data>(_json);
+            _data = JsonSerializer.Deserialize<Data>(_jsonString);
 
             return _data!;
         }
