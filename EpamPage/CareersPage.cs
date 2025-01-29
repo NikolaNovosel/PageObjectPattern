@@ -65,7 +65,7 @@ namespace EpamPage
         // Enters a keyword into the search field  
         public CareersPage SendKeysKeyword(string keyword)
         { 
-            Keywords.SendKeys(keyword); 
+            Keywords.SendKeys(keyword);
 
             return this;
         }
@@ -102,8 +102,9 @@ namespace EpamPage
         {
             try
             {
-                Remote.Click();
+                Driver.ExecuteJavaScript("arguments[0].click()", Remote);
             }
+
             catch (ElementClickInterceptedException)
             {
                 Wait.Until(driver => Cookie.Enabled);
