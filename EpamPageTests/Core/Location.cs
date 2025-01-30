@@ -7,7 +7,7 @@ namespace EpamPageTests.Core
         private static readonly string _baseDir = AppDomain.CurrentDomain.BaseDirectory;
 
         // Path to main project directory
-        private static readonly string _projectPath = Path.GetFullPath(Path.Combine(_baseDir, @"..\..\.."));
+        private static readonly string _projectPath = Path.GetFullPath(Path.Combine(_baseDir, "..", "..", ".."));
 
         // Path to appsettings json
         internal static readonly string JsonAppSettings = Path.Combine(_projectPath, "appsettings.json");

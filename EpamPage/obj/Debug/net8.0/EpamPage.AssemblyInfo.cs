@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EpamPage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42853ab738d676d52873f2bf09ad4f351ac68de1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33c3f0288c77ee57f14454b7926baef05ad112d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("EpamPage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EpamPage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

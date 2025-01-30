@@ -46,7 +46,7 @@ namespace EpamPage
             }
             try
             {
-                Wait.Until(driver => MainArticleParent.Displayed);
+                Wait.Until(driver => MainArticle.Displayed);
             }
             catch (WebDriverTimeoutException)
             {

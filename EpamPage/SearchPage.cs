@@ -70,6 +70,7 @@ namespace EpamPage
         public SearchPage ScroolToLastLink() 
         { 
             Actions.ScrollByAmount(0, ScrolledLastLink.Location.Y).Perform();
+            Wait.Until(driver => LastSearchResultLink.Displayed);
             return this;
         }
 
